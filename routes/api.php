@@ -31,7 +31,7 @@ Route::group(['middleware' => 'jwt.auth'], function () {
 });
 
 Route::group(['middleware' => ['jwt.auth', 'isSuperAdmin']], function () {
-    Route::post('user/super_admin/{id}', [UserController::class, 'addSuperAdminRoleToUser']);
+    Route::post('user/superadmin/{id}', [UserController::class, 'addSuperAdminRoleToUser']);
     Route::post('user/remove_super_admin/{id}', [UserController::class, 'removeSuperAdminRoleFromUser']);  
     Route::post('user/sadmin_get_all_users/{id}',[UserController::class, 'getRoleUserByAdmin']);
     Route::delete('user/sadmin_delete_channel/{id}', [ChannelController::class, 'sadminDelChannelById']);
