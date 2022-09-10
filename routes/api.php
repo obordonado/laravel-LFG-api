@@ -31,12 +31,12 @@ Route::group(['middleware' => 'jwt.auth'], function () {
 });
 
 Route::group(['middleware' => ['jwt.auth', 'isSuperAdmin']], function () {
-    Route::post('user/superadmin/{id}', [UserController::class, 'addSuperAdminRoleToUser']);
-    Route::post('user/remove_super_admin/{id}', [UserController::class, 'removeSuperAdminRoleFromUser']);  
-    Route::post('user/sadmin_get_all_users/{id}',[UserController::class, 'getRoleUserByAdmin']);
-    Route::delete('user/sadmin_delete_channel/{id}', [ChannelController::class, 'sadminDelChannelById']);
-    Route::delete('user/sadmin_deletemsg/{id}', [MessageController::class, 'delMessageById']);
-    Route::delete('/user/sadmin_deleteuser/{id}', [UserController::class, 'delUserById']);
+    Route::post('user/supad/{id}', [UserController::class, 'addSuperAdminRoleToUser']);
+    Route::post('user/remsupad/{id}', [UserController::class, 'removeSuperAdminRoleFromUser']);  
+    Route::post('user/adgetallusers/{id}',[UserController::class, 'getRoleUserByAdmin']);
+    Route::delete('user/addelchan/{id}', [ChannelController::class, 'sadminDelChannelById']);
+    Route::delete('user/addelmsg/{id}', [MessageController::class, 'delMessageById']);
+    Route::delete('/user/addeluser/{id}', [UserController::class, 'delUserById']);
 });
 
 
