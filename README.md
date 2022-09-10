@@ -14,7 +14,7 @@ Desde GeeksHubsAcademy se solicita la siguiente aplicación.
 
 
 > ##### Los requisitos funcionales de la aplicación son los siguientes:
-
+<pre>
 > ● RF.1 Los usuarios se tienen que poder registrar a la aplicación, estableciendo un usuario/contraseña.
 > ● RF.2 Los usuarios tienen que autenticarse a la aplicación haciendo login.
 > ● RF.3 Los usuarios tienen que poder crear Partídas (grupos) para un determinado videojuego.
@@ -32,3 +32,4 @@ Desde GeeksHubsAcademy se solicita la siguiente aplicación.
 > ● CRUD de los diferentes modelos.
 > ● Excelente Readme (IMPORTANTE).
 > ● Subida a producción en Heroku.
+</pre>
