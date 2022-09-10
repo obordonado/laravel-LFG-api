@@ -55,7 +55,7 @@
 
 > Para cumplir con los requisitos solicitados, se han creado las siguientes tablas y sus relaciones:
 
-<center><img src="/public/img/tablas-devos-laravel-lfg-api.png" style="width:500px;"/></center>
+<center><img src="/public/img/tablas-devos-laravel-lfg-api.png" style="width:800px;"/></center>
 
 > El proyecto se ha realizado en una rama adicional de trabajo, haciendo un merge cuando se ha comprobado su funcionalidad.
 >
