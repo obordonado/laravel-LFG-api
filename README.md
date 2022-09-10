@@ -7,11 +7,22 @@
 </center>
 </pre>
 
+<br>
 
-Desde GeeksHubsAcademy se solicita la siguiente aplicación.
+> Desde GeeksHubsAcademy se solicita la siguiente aplicación :
 # <center>Laravel LFG project APIREST</center>
 
+<br>
 
+##### Este documento consta de dos secciones:
+<br>
+
+> * Requisitos
+> * Demostración de proyecto e instrucciones de uso.
+
+<br><br>
+
+> #### Primera sección:
 
 > ##### Los requisitos funcionales de la aplicación son los siguientes:
 <pre>
@@ -33,3 +44,18 @@ Desde GeeksHubsAcademy se solicita la siguiente aplicación.
 > ● Excelente Readme (IMPORTANTE).
 > ● Subida a producción en Heroku.
 </pre>
+
+---
+
+> #### Segunda sección:
+
+> ##### Demostración de proyecto e instrucciones de uso.
+
+<br>
+
+> Para cumplir con los requisitos solicitados, se han creado las siguientes tablas y sus relaciones:
+
+<center><img src="/public/img/tablas-devos-laravel-lfg-api.png" style="width:500px;"/></center>
+
+> El proyecto se ha realizado en una rama adicional de trabajo, haciendo un merge cuando se ha comprobado su funcionalidad.
+>
