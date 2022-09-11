@@ -59,4 +59,4 @@
 
 > El proyecto se ha realizado en una rama adicional de trabajo, haciendo un merge cuando se ha comprobado una o varias funcionalidades.
 
->
+> Se ha utilizado Json Web Token 
