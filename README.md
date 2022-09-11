@@ -98,77 +98,127 @@ Vista de los distintos grupos creados para Postman.
 >* La aplicación cuenta con distintos seeds para ser probada sin tener que rellenar datos desde Workbench (p.ej.)
 
 <br>
+ 
+ ---
 
 #### En adelante se muestran capturas de los distintos endpoints de la aplicación que se pueden agrandar al hacer click sobre su imagen, además de una breve descripción.
 <br>
 
-
 * #### USERS
+
+<br>
+
 >* <b>Register User;</b>
 <img src="/public/img/Register-User.png" style="width:358px;"/>
 Se deberán introduciŕ los datos que aparecen en la captura mediante json.
 
+<br>
 
 
 >* <b>User login;</b>
 <img src="/public/img/User-Login.png" style="width:358px;"/>
 Se deberán introduciŕ los datos que aparecen en la captura mediante json.
 
+<br>
+
+
 >* <b>User Profile;</b>
 <img src="/public/img/User-Profile.png" style="width:358px;"/>
 Se deberá introduciŕ autenticación mediante token.
 
+<br>
+
+
 >* <b>User edit own profile;</b>
 <img src="/public/img/Register-User.png" style="width:358px;"/>
 Se deberán introduciŕ los datos que aparecen en la captura mediante json además de introduciŕ autenticación mediante token.
+
+<br>
 
 
 >* <b>Add super admin to user;</b>
 <img src="/public/img/Add-sadmin-by-id.png" style="width:358px;"/>
 El usuario ha de ser super admin e introducir autenticación mediante token y la id del usuario al que quiera dar privilegios en la url.
 
+<br>
+
+
 >* <b>Remove super admin from user;</b>
 <img src="/public/img/Add-sadmin-by-id.png" style="width:358px;"/>
 El usuario ha de ser super admin e introducir autenticación mediante token y la id del usuario al que quiera quietar privilegios en la url.
+
+<br>
+
 
 >* <b>Logout user;</b>
 <img src="/public/img/Add-sadmin-by-id.png" style="width:358px;"/>
 El usuario ha de introducir autenticación mediante token.
 
+<br>
+
+
 >* <b>Get all users by role;</b>
 <img src="/public/img/Get-users-by-role-sadmin.png" style="width:358px;"/>
 El usuario ha de ser super admin e introducir autenticación mediante token.
+
+<br>
 
 
 >* <b>Delete user by id;</b>
 <img src="/public/img/Add-sadmin-by-id.png" style="width:358px;"/>
 El usuario ha de ser super admin e introducir autenticación mediante token y la id del usuario al que quiera eliminar en la url.
 
+<br>
+
+
+---
+
 * #### GAMES
+
+<br>
+
 
 >* <b>Create game;</b>
 <img src="/public/img/Create-game.png" style="width:358px;"/>
 El usuario ha de introducir autenticación mediante token y el título del juego.
 
+<br>
+
+
 >* <b>Get all games;</b>
 <img src="/public/img/Get-all-games.png" style="width:358px;"/>
 No es necesario estar registrado para ver los juegos disponibles.
+
+<br>
+
 
 >* <b>Get game by id;</b>
 <img src="/public/img/Get-game-by-id.png" style="width:358px;"/>
 El usuario ha de introducir autenticación mediante token y la id del juego en la url.
 
+<br>
+
+
 >* <b>Get game by title;</b>
 <img src="/public/img/Get-game-by-title.png" style="width:358px;"/>
 El usuario ha de introducir autenticación mediante token y el título del juego mediante json.
+
+<br>
+
 
 >* <b>Get own games by user id;</b>
 <img src="/public/img/Get-own-games-by-user-id.png" style="width:358px;"/>
 El usuario ha de introducir autenticación mediante token y la id del usuario en la url.
 
+<br>
+
+
 >* <b>Update game title by id;</b>
 <img src="/public/img/Update-game-title-by-id.png" style="width:358px;"/>
 El usuario ha de introducir autenticación mediante token, la id del juego en la url y el nuevo título mediante json.
+
+<br>
+
 
 >* <b>Delete game by id;</b>
 <img src="/public/img/Get-own-games-by-user-id.png" style="width:358px;"/>
@@ -178,61 +228,97 @@ El usuario ha de introducir autenticación mediante token y la id del juego en l
 
 * #### CHANNELS
 
+<br>
+
+
 >* <b>Create new channel;</b>
 <img src="/public/img/Create-new-channel.png" style="width:358px;"/>
 El usuario ha de introducir autenticación mediante token, name y game id mediante json.
+
+<br>
+
 
 >* <b>Get all channels;</b>
 <img src="/public/img/Create-new-channel.png" style="width:358px;"/>
 No es necesario registro para acceder a los distintos canales.
 
+<br>
+
+
 >* <b>Get channel by id</b>
 <img src="/public/img/Get-channel-by-id.png" style="width:358px;"/>
 No es necesario registro para acceder a los distintos canales.
+
+<br>
 
 
 >* <b>Get channel by name;</b>
 <img src="/public/img/Get-channel-by-name.png" style="width:358px;"/>
 No es necesario registro para acceder a los distintos canales.
 
+<br>
+
 
 >* <b>Join channel by id;</b>
 <img src="/public/img/Join-channel-by-id.png" style="width:358px;"/>
 El usuario ha de introducir autenticación mediante token, y canal en url.
 
+<br>
+
+
 >* <b>Exit channel by id;</b>
 <img src="/public/img/Exit-channel-by-id.png" style="width:358px;"/>
 El usuario ha de introducir autenticación mediante token, y canal en url.
+
+<br>
 
 
 >* <b>Delete channel by id (super admin);</b>
 <img src="/public/img/Delete-channel-by-id.png" style="width:358px;"/>
 El usuario ha de introducir autenticación mediante token, y canal en url.
 
+<br>
+
+---
+
 #### MESSAGES
+
+<br>
+
 
 >* <b>Create message;</b>
 <img src="/public/img/Create-message.png" style="width:358px;"/>
 El usuario ha de introducir autenticación mediante token, channel id y mensaje.
 
+<br>
+
+
 >* <b>Get own messages;</b>
 <img src="/public/img/Get-own-messages.png" style="width:358px;"/>
 El usuario ha de introducir autenticación mediante token.
 
+<br>
+
+
 >* <b>Get messages by message id;</b>
 <img src="/public/img/Get-messages-by-id.png" style="width:358px;"/>
 El usuario ha de introducir autenticación mediante token, y el id en url.
+
+<br>
 
 
 >* <b>Update message by id;</b>
 <img src="/public/img/Update-message-by-id.png" style="width:358px;"/>
 El usuario ha de introducir autenticación mediante token, channel id, mensaje y el id en url.
 
-
+<br>
 
 >* <b>Delete message by id (super admin);</b>
 <img src="/public/img/Update-message-by-id.png" style="width:358px;"/>
 El usuario ha de introducir autenticación mediante token y el id en url.
 
+---
 
+>* Aquí concluye la aplicación y sus posibilidades de momento, pues iré corrigiendo pequeños errores de código o mejoras del mismo para ir ampliándola.
 
+>* <b>Por último, indicar que todo feedback es bienvenido !!</b>
