@@ -192,16 +192,47 @@ No es necesario registro para acceder a los distintos canales.
 
 
 >* <b>Get channel by name;</b>
-<img src="/public/img/Create-new-channel.png" style="width:358px;"/>
+<img src="/public/img/Get-channel-by-name.png" style="width:358px;"/>
 No es necesario registro para acceder a los distintos canales.
 
 
+>* <b>Join channel by id;</b>
+<img src="/public/img/Join-channel-by-id.png" style="width:358px;"/>
+El usuario ha de introducir autenticación mediante token, y canal en url.
+
+>* <b>Exit channel by id;</b>
+<img src="/public/img/Exit-channel-by-id.png" style="width:358px;"/>
+El usuario ha de introducir autenticación mediante token, y canal en url.
+
+
+>* <b>Delete channel by id (super admin);</b>
+<img src="/public/img/Delete-channel-by-id.png" style="width:358px;"/>
+El usuario ha de introducir autenticación mediante token, y canal en url.
+
+#### MESSAGES
+
+>* <b>Create message;</b>
+<img src="/public/img/Create-message.png" style="width:358px;"/>
+El usuario ha de introducir autenticación mediante token, channel id y mensaje.
+
+>* <b>Get own messages;</b>
+<img src="/public/img/Get-own-messages.png" style="width:358px;"/>
+El usuario ha de introducir autenticación mediante token.
+
+>* <b>Get messages by message id;</b>
+<img src="/public/img/Get-messages-by-id.png" style="width:358px;"/>
+El usuario ha de introducir autenticación mediante token, y el id en url.
+
+
+>* <b>Update message by id;</b>
+<img src="/public/img/Update-message-by-id.png" style="width:358px;"/>
+El usuario ha de introducir autenticación mediante token, channel id, mensaje y el id en url.
 
 
 
-
-
-
+>* <b>Delete message by id (super admin);</b>
+<img src="/public/img/Update-message-by-id.png" style="width:358px;"/>
+El usuario ha de introducir autenticación mediante token y el id en url.
 
 
 
