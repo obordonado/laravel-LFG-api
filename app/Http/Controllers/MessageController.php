@@ -294,7 +294,8 @@ class MessageController extends Controller
             return response()->json(
                 [
                     'success' => true,
-                    'message'=> 'Got messages by channel id correctly.'
+                    'message'=> 'Got messages by channel id correctly.',
+                    'data' => $messages
                 ],
                 200
             );
