@@ -13,15 +13,15 @@ class MessageController extends Controller
 
         try {
 
-            $user_Id = auth()->user()->id;
+            $userId = auth()->user()->id;
 
-            Log::info('User id '.$user_Id. ' is creating a message..');
+            Log::info('User id '.$userId. ' is creating a message..');
 
             $validator = Validator::make($request->all(), [
                 'channel_id' => ['required','integer'],
                 'message' => ['required','string','min:2','max:100']
             ]);
-            Log::info('User id '.$user_Id.' passed validator correctly.');
+            Log::info('User id '.$userId.' passed validator correctly.');
 
             if ($validator->fails()) {
                 
@@ -42,15 +42,15 @@ class MessageController extends Controller
             $message = new Message();
             $message->channel_id = $channel_id;
             $message->message = $userMessage;
-            $message->user_id = $user_Id;
+            $message->user_id = $userId;
             $message->save();
             
-            Log::info('User id '.$user_Id.' created message correctly.');
+            Log::info('User id '.$userId.' created message correctly.');
 
             return response()->json(
                 [
                     'success' => true,
-                    'message' => 'User id '.$user_Id.' created message correctly.'
+                    'message' => 'User id '.$userId.' created message correctly.'
                 ],
                 200
             );
@@ -72,16 +72,16 @@ class MessageController extends Controller
     public function getOwnMessages(){
 
         try {
-            $user_Id = auth()->user()->id;
+            $userId = auth()->user()->id;
 
-            Log::info('User id '.$user_Id.' getting own messages.');
+            Log::info('User id '.$userId.' getting own messages.');
 
             $messages = Message::query()
-            -> where('user_id','=', $user_Id)
+            -> where('user_id','=', $userId)
             -> get()
             -> toArray();
 
-            Log::info('User id '.$user_Id.' got own messages without error.');
+            Log::info('User id '.$userId.' got own messages without error.');
 
             return response()->json(
                 [
@@ -108,14 +108,14 @@ class MessageController extends Controller
     public function getMessageByMsgId($id) {
 
         try {
-            $user_Id = auth()->user()->id;
+            $userId = auth()->user()->id;
 
-            Log::info('User id '.$user_Id.' getting message by message id...');
+            Log::info('User id '.$userId.' getting message by message id...');
 
             $message = Message::query()
             
             ->where('id','=', $id)
-            ->where('user_id','=', $user_Id)
+            ->where('user_id','=', $userId)
             ->get()->toArray();
 
             if(!$message) {
@@ -129,7 +129,7 @@ class MessageController extends Controller
                 );
             }
             
-            Log::info('User id '.$user_Id.' retrieved message by id without error.');
+            Log::info('User id '.$userId.' retrieved message by id without error.');
 
             return response()->json(
                 [
@@ -156,9 +156,9 @@ class MessageController extends Controller
     public function updateMessageByMsgId(Request $request, $id){
         
         try {
-            $user_Id = auth()->user()->id;
+            $userId = auth()->user()->id;
 
-            Log::info('User id '.$user_Id.' updating message...');
+            Log::info('User id '.$userId.' updating message...');
 
             $validator = Validator::make($request->all(), [
                 'channel_id' => ['required','integer'],
@@ -167,20 +167,20 @@ class MessageController extends Controller
 
             if($validator->fails()) {
 
-                Log::info('User id '.$user_Id.' validation error updating message.'.$validator->errors());
+                Log::info('User id '.$userId.' validation error updating message.'.$validator->errors());
 
                 return response()->json(
                     [
                         'success' => false,
-                        'message' => 'User id '.$user_Id.' validation error updating message. '.$validator->errors()
+                        'message' => 'User id '.$userId.' validation error updating message. '.$validator->errors()
                     ],
                     400
                 );
             }            
-            Log::info('User id '.$user_Id.' passed validator correctly.');
+            Log::info('User id '.$userId.' passed validator correctly.');
 
             $message = Message::query()
-            -> where('user_id', '=' , $user_Id)
+            -> where('user_id', '=' , $userId)
             -> find($id);            
 
             if (!$message){
@@ -206,7 +206,7 @@ class MessageController extends Controller
 
             $message->save();
 
-            Log::info('User id '.$user_Id.' updated message correctly.');
+            Log::info('User id '.$userId.' updated message correctly.');
 
             return response()->json(
 
@@ -234,9 +234,9 @@ class MessageController extends Controller
     public function delMessageById($id){
         
         try {
-            $user_Id = auth()->user()->id;
+            $userId = auth()->user()->id;
 
-            Log::info('User id '.$user_Id.' deleting message...');
+            Log::info('User id '.$userId.' deleting message...');
 
             $message = Message::query()-> find($id);            
 
@@ -254,7 +254,7 @@ class MessageController extends Controller
 
             $message->delete();
 
-            Log::info('User id '.$user_Id.' deleted message correctly.');
+            Log::info('User id '.$userId.' deleted message correctly.');
 
             return response()->json(
                 [

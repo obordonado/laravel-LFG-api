@@ -264,9 +264,9 @@ class ChannelController extends Controller
     public function sadminDelChannelById($id)
     {
         try {
-            $user_Id = auth()->user()->id;
+            $userId = auth()->user()->id;
 
-            Log::info('Deleting channel '.$id.' by user id '.$user_Id);
+            Log::info('Deleting channel '.$id.' by user id '.$userId);
 
             $channel = Channel::query()->find($id);
 
@@ -289,13 +289,13 @@ class ChannelController extends Controller
             return response()->json(
                 [
                     'success' => true,
-                    'message' => 'Channel '.$id. ' deleted correctly by super admin '.$user_Id
+                    'message' => 'Channel '.$id. ' deleted correctly by super admin '.$userId
                 ],
                 200
             );
         } catch (\Exception $exception) {
 
-            Log::error('Error deleting channel '.$id.' by user id '.$user_Id.'. '  . $exception->getMessage());
+            Log::error('Error deleting channel '.$id.' by user id '.$userId.'. '  . $exception->getMessage());
 
             return response()->json(
                 [

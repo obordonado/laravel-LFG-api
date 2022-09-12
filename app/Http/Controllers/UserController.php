@@ -16,7 +16,7 @@ class UserController extends Controller
 
         try {
             
-            $user_id = auth()->user()->id;
+            $userId = auth()->user()->id;
 
             Log::info('Adding role super admin to user '.$id);
   
@@ -51,7 +51,7 @@ class UserController extends Controller
 
         try {
             
-            $user_id = auth()->user()->id;
+            $userId = auth()->user()->id;
 
             Log::info('Removing role super admin from user '.$id.'.');
   
@@ -86,7 +86,7 @@ class UserController extends Controller
 
         try {
             
-            $user_id = auth()->user()->id;
+            $userId = auth()->user()->id;
 
             Log::info('getting all role id 1 users by super admin...');
     
@@ -126,9 +126,9 @@ class UserController extends Controller
     public function delUserById($id){
         
         try {
-            $user_Id = auth()->user()->id;
+            $userId = auth()->user()->id;
 
-            Log::info('User id '.$user_Id.' deleting user...');
+            Log::info('User id '.$userId.' deleting user...');
 
             $user = User::query()-> find($id);            
 
@@ -146,7 +146,7 @@ class UserController extends Controller
 
             $user->delete();
 
-            Log::info('User id '.$user_Id.' deleted user id '.$id.' correctly.');
+            Log::info('User id '.$userId.' deleted user id '.$id.' correctly.');
 
             return response()->json(
                 [
