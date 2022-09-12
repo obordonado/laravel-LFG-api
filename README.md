@@ -103,6 +103,11 @@ Vista de los distintos grupos creados para Postman.
  > Tras clonar es necesario ejecutar los siguientes comandos desde el terminal:
  >* composer install
  >* php artisan db:migrate
+ >* php artisan db:seed
+
+ > Con esos comandos y configurando el archivo .env para trabajar en local, se podrá hacer uso de la aplicación.
+
+ 
  
 
 
