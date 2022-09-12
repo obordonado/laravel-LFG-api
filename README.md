@@ -100,17 +100,14 @@ Vista de los distintos grupos creados para Postman.
 <br>
  
  > Para poder hacer uso de la aplicación es necesario clonarla o descargar el archivo zip.
- > Tras clonar es necesario ejecutar los siguientes comandos desde el terminal:
+
+ > Tras clonar o usar el .zip, es necesario ejecutar los siguientes comandos desde el terminal:
  >* composer install
  >* php artisan db:migrate
  >* php artisan db:seed
 
- > Con esos comandos y configurando el archivo .env para trabajar en local, se podrá hacer uso de la aplicación.
-
+ > Con esos comandos y configurando el archivo .env para trabajar en local, se podrá hacer uso de la aplicación haciendo las solicitudes en "http://localhost:8000/api/{ENDPOINT}"
  
- 
-
-
 
  ---
 
