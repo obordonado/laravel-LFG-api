@@ -99,6 +99,14 @@ Vista de los distintos grupos creados para Postman.
 
 <br>
  
+ > Para poder hacer uso de la aplicación es necesario clonarla o descargar el archivo zip.
+ > Tras clonar es necesario ejecutar los siguientes comandos desde el terminal:
+ >* composer install
+ >* php artisan db:migrate
+ 
+
+
+
  ---
 
 #### En adelante se muestran capturas de los distintos endpoints de la aplicación que se pueden agrandar al hacer click sobre su imagen, además de una breve descripción.
