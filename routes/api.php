@@ -58,7 +58,6 @@ Route::get('/getallchannels', [ChannelController::class, 'getAllChannels']);
 Route::get('/channel/{id}', [ChannelController::class, 'getChannelById']);
 Route::get('/channelbyname',[ChannelController::class, 'getChannelByName']);
 
-
 Route::group(['middleware' =>'jwt.auth'], function(){
     Route::post('/channel', [ChannelController::class, 'createChannel']);
     Route::post('/joinchannel/{id}', [ChannelController::class, 'joinChannelById']);
@@ -67,6 +66,8 @@ Route::group(['middleware' =>'jwt.auth'], function(){
 });
 
 //// ROUTES FOR MESSAGES ////
+Route::get('/messagesbychannelid/{id}', [MessageController::class, 'getMessagesByChannel']);
+
 Route::group(['middleware' => 'jwt.auth'], function(){
     Route::post('/createmessage',[MessageController::class, 'createNewMessage']);
     Route::post('/getownmessages', [MessageController::class, 'getOwnMessages']);

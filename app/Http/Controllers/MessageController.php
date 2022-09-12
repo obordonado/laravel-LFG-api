@@ -279,5 +279,39 @@ class MessageController extends Controller
         }
     }
 
+    public function getMessagesByChannel($channelId){
+
+        try {
+            Log::info('Getting messages by channel id...');
+
+            $messages = Message::query()
+            ->where('channel_id', '=', $channelId)
+            ->get()
+            ->toArray();
+
+            Log::info('Got messages by channel id correctly.');
+            
+            return response()->json(
+                [
+                    'success' => true,
+                    'message'=> 'Got messages by channel id correctly.'
+                ],
+                200
+            );
+            
+        } catch (\Exception $exception) {
+            
+            Log::info('Error getting messages by channel id. '.$exception->getMessage());
+
+            return response()->json(
+                [
+                    'success'=> false,
+                    'message' => 'Error getting messages by channel id.'
+                ],
+                400
+            );
+        }
+    }
+
 
 }
