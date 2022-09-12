@@ -111,7 +111,8 @@ Vista de los distintos grupos creados para Postman.
 
 >* <b>Register User;</b>
 <img src="/public/img/Register-User.png" style="width:358px;"/>
-Se deberán introduciŕ los datos que aparecen en la captura mediante json.
+
+> Se deberán introduciŕ los datos que aparecen en la captura mediante json.
 
 <br>
 <br>
@@ -119,7 +120,8 @@ Se deberán introduciŕ los datos que aparecen en la captura mediante json.
 
 >* <b>User login;</b>
 <img src="/public/img/User-Login.png" style="width:358px;"/>
-Se deberán introduciŕ los datos que aparecen en la captura mediante json.
+
+> Se deberán introduciŕ los datos que aparecen en la captura mediante json.
 
 <br><br>
 
@@ -127,7 +129,8 @@ Se deberán introduciŕ los datos que aparecen en la captura mediante json.
 
 >* <b>User Profile;</b>
 <img src="/public/img/User-Profile.png" style="width:358px;"/>
-Se deberá introduciŕ autenticación mediante token.
+
+> Se deberá introduciŕ autenticación mediante token.
 
 <br><br>
 
@@ -135,7 +138,8 @@ Se deberá introduciŕ autenticación mediante token.
 
 >* <b>User edit own profile;</b>
 <img src="/public/img/Register-User.png" style="width:358px;"/>
-Se deberán introduciŕ los datos que aparecen en la captura mediante json además de introduciŕ autenticación mediante token.
+
+> Se deberán introduciŕ los datos que aparecen en la captura mediante json además de introduciŕ autenticación mediante token.
 
 <br><br>
 
@@ -143,7 +147,8 @@ Se deberán introduciŕ los datos que aparecen en la captura mediante json adem�
 
 >* <b>Add super admin to user;</b>
 <img src="/public/img/Add-sadmin-by-id.png" style="width:358px;"/>
-El usuario ha de ser super admin e introducir autenticación mediante token y la id del usuario al que quiera dar privilegios en la url.
+
+> El usuario ha de ser super admin e introducir autenticación mediante token y la id del usuario al que quiera dar privilegios en la url.
 
 <br><br>
 
@@ -151,7 +156,8 @@ El usuario ha de ser super admin e introducir autenticación mediante token y la
 
 >* <b>Remove super admin from user;</b>
 <img src="/public/img/Add-sadmin-by-id.png" style="width:358px;"/>
-El usuario ha de ser super admin e introducir autenticación mediante token y la id del usuario al que quiera quietar privilegios en la url.
+
+> El usuario ha de ser super admin e introducir autenticación mediante token y la id del usuario al que quiera quietar privilegios en la url.
 
 <br><br>
 
@@ -159,7 +165,8 @@ El usuario ha de ser super admin e introducir autenticación mediante token y la
 
 >* <b>Logout user;</b>
 <img src="/public/img/Add-sadmin-by-id.png" style="width:358px;"/>
-El usuario ha de introducir autenticación mediante token.
+
+> El usuario ha de introducir autenticación mediante token.
 
 <br><br>
 
@@ -167,7 +174,8 @@ El usuario ha de introducir autenticación mediante token.
 
 >* <b>Get all users by role;</b>
 <img src="/public/img/Get-users-by-role-sadmin.png" style="width:358px;"/>
-El usuario ha de ser super admin e introducir autenticación mediante token.
+
+> El usuario ha de ser super admin e introducir autenticación mediante token.
 
 <br><br>
 
@@ -175,7 +183,8 @@ El usuario ha de ser super admin e introducir autenticación mediante token.
 
 >* <b>Delete user by id;</b>
 <img src="/public/img/Add-sadmin-by-id.png" style="width:358px;"/>
-El usuario ha de ser super admin e introducir autenticación mediante token y la id del usuario al que quiera eliminar en la url.
+
+> El usuario ha de ser super admin e introducir autenticación mediante token y la id del usuario al que quiera eliminar en la url.
 
 <br><br>
 
@@ -191,7 +200,8 @@ El usuario ha de ser super admin e introducir autenticación mediante token y la
 
 >* <b>Create game;</b>
 <img src="/public/img/Create-game.png" style="width:358px;"/>
-El usuario ha de introducir autenticación mediante token y el título del juego.
+
+> El usuario ha de introducir autenticación mediante token y el título del juego.
 
 <br><br>
 
@@ -199,7 +209,8 @@ El usuario ha de introducir autenticación mediante token y el título del juego
 
 >* <b>Get all games;</b>
 <img src="/public/img/Get-all-games.png" style="width:358px;"/>
-No es necesario estar registrado para ver los juegos disponibles.
+
+> No es necesario estar registrado para ver los juegos disponibles.
 
 <br><br>
 
@@ -207,7 +218,8 @@ No es necesario estar registrado para ver los juegos disponibles.
 
 >* <b>Get game by id;</b>
 <img src="/public/img/Get-game-by-id.png" style="width:358px;"/>
-El usuario ha de introducir autenticación mediante token y la id del juego en la url.
+
+> El usuario ha de introducir autenticación mediante token y la id del juego en la url.
 
 <br><br>
 
@@ -215,7 +227,8 @@ El usuario ha de introducir autenticación mediante token y la id del juego en l
 
 >* <b>Get game by title;</b>
 <img src="/public/img/Get-game-by-title.png" style="width:358px;"/>
-El usuario ha de introducir autenticación mediante token y el título del juego mediante json.
+
+> El usuario ha de introducir autenticación mediante token y el título del juego mediante json.
 
 <br><br>
 
@@ -223,7 +236,8 @@ El usuario ha de introducir autenticación mediante token y el título del juego
 
 >* <b>Get own games by user id;</b>
 <img src="/public/img/Get-own-games-by-user-id.png" style="width:358px;"/>
-El usuario ha de introducir autenticación mediante token y la id del usuario en la url.
+
+> El usuario ha de introducir autenticación mediante token y la id del usuario en la url.
 
 <br><br>
 
@@ -231,7 +245,8 @@ El usuario ha de introducir autenticación mediante token y la id del usuario en
 
 >* <b>Update game title by id;</b>
 <img src="/public/img/Update-game-title-by-id.png" style="width:358px;"/>
-El usuario ha de introducir autenticación mediante token, la id del juego en la url y el nuevo título mediante json.
+
+> El usuario ha de introducir autenticación mediante token, la id del juego en la url y el nuevo título mediante json.
 
 <br><br>
 
@@ -239,7 +254,8 @@ El usuario ha de introducir autenticación mediante token, la id del juego en la
 
 >* <b>Delete game by id;</b>
 <img src="/public/img/Get-own-games-by-user-id.png" style="width:358px;"/>
-El usuario ha de introducir autenticación mediante token y la id del juego en la url.
+
+> El usuario ha de introducir autenticación mediante token y la id del juego en la url.
 
 ---
 
@@ -251,7 +267,8 @@ El usuario ha de introducir autenticación mediante token y la id del juego en l
 
 >* <b>Create new channel;</b>
 <img src="/public/img/Create-new-channel.png" style="width:358px;"/>
-El usuario ha de introducir autenticación mediante token, name y game id mediante json.
+
+> El usuario ha de introducir autenticación mediante token, name y game id mediante json.
 
 <br><br>
 
@@ -259,7 +276,8 @@ El usuario ha de introducir autenticación mediante token, name y game id median
 
 >* <b>Get all channels;</b>
 <img src="/public/img/Create-new-channel.png" style="width:358px;"/>
-No es necesario registro para acceder a los distintos canales.
+
+> No es necesario registro para acceder a los distintos canales.
 
 <br><br>
 
@@ -267,7 +285,8 @@ No es necesario registro para acceder a los distintos canales.
 
 >* <b>Get channel by id</b>
 <img src="/public/img/Get-channel-by-id.png" style="width:358px;"/>
-No es necesario registro para acceder a los distintos canales.
+
+> No es necesario registro para acceder a los distintos canales.
 
 <br><br>
 
@@ -275,7 +294,8 @@ No es necesario registro para acceder a los distintos canales.
 
 >* <b>Get channel by name;</b>
 <img src="/public/img/Get-channel-by-name.png" style="width:358px;"/>
-No es necesario registro para acceder a los distintos canales.
+
+> No es necesario registro para acceder a los distintos canales.
 
 <br><br>
 
@@ -283,7 +303,8 @@ No es necesario registro para acceder a los distintos canales.
 
 >* <b>Join channel by id;</b>
 <img src="/public/img/Join-channel-by-id.png" style="width:358px;"/>
-El usuario ha de introducir autenticación mediante token, y canal en url.
+
+> El usuario ha de introducir autenticación mediante token, y canal en url.
 
 <br><br>
 
@@ -291,7 +312,8 @@ El usuario ha de introducir autenticación mediante token, y canal en url.
 
 >* <b>Exit channel by id;</b>
 <img src="/public/img/Exit-channel-by-id.png" style="width:358px;"/>
-El usuario ha de introducir autenticación mediante token, y canal en url.
+
+> El usuario ha de introducir autenticación mediante token, y canal en url.
 
 <br><br>
 
@@ -299,7 +321,8 @@ El usuario ha de introducir autenticación mediante token, y canal en url.
 
 >* <b>Delete channel by id (super admin);</b>
 <img src="/public/img/Delete-channel-by-id.png" style="width:358px;"/>
-El usuario ha de introducir autenticación mediante token, y canal en url.
+
+> El usuario ha de introducir autenticación mediante token, y canal en url.
 
 <br><br>
 
@@ -314,7 +337,8 @@ El usuario ha de introducir autenticación mediante token, y canal en url.
 
 >* <b>Create message;</b>
 <img src="/public/img/Create-message.png" style="width:358px;"/>
-El usuario ha de introducir autenticación mediante token, channel id y mensaje.
+
+> El usuario ha de introducir autenticación mediante token, channel id y mensaje.
 
 <br><br>
 
@@ -322,7 +346,8 @@ El usuario ha de introducir autenticación mediante token, channel id y mensaje.
 
 >* <b>Get own messages;</b>
 <img src="/public/img/Get-own-messages.png" style="width:358px;"/>
-El usuario ha de introducir autenticación mediante token.
+
+> El usuario ha de introducir autenticación mediante token.
 
 <br><br>
 
@@ -330,7 +355,8 @@ El usuario ha de introducir autenticación mediante token.
 
 >* <b>Get messages by message id;</b>
 <img src="/public/img/Get-messages-by-id.png" style="width:358px;"/>
-El usuario ha de introducir autenticación mediante token, y el id en url.
+
+> El usuario ha de introducir autenticación mediante token, y el id en url.
 
 <br><br>
 
@@ -338,14 +364,16 @@ El usuario ha de introducir autenticación mediante token, y el id en url.
 
 >* <b>Update message by id;</b>
 <img src="/public/img/Update-message-by-id.png" style="width:358px;"/>
-El usuario ha de introducir autenticación mediante token, channel id, mensaje y el id en url.
+
+> El usuario ha de introducir autenticación mediante token, channel id, mensaje y el id en url.
 
 <br><br>
 
 
 >* <b>Delete message by id (super admin);</b>
 <img src="/public/img/Update-message-by-id.png" style="width:358px;"/>
-El usuario ha de introducir autenticación mediante token y el id en url.
+
+> El usuario ha de introducir autenticación mediante token y el id en url.
 
 ---
 
