@@ -31,17 +31,17 @@ Route::group(['middleware' => 'jwt.auth'], function () {
 });
 
 Route::group(['middleware' => ['jwt.auth', 'isSuperAdmin']], function () {
-    Route::post('user/adsupad/{id}', [UserController::class, 'addSuperAdminRoleToUser']);
-    Route::post('user/remsupad/{id}', [UserController::class, 'removeSuperAdminRoleFromUser']);  
-    Route::post('user/getallusersad/{id}',[UserController::class, 'getRoleUserByAdmin']);
-    Route::delete('user/addelchan/{id}', [ChannelController::class, 'sadminDelChannelById']);
-    Route::delete('user/addelmsg/{id}', [MessageController::class, 'delMessageById']);
+    Route::post('/user/adsupad/{id}', [UserController::class, 'addSuperAdminRoleToUser']);
+    Route::post('/user/remsupad/{id}', [UserController::class, 'removeSuperAdminRoleFromUser']);  
+    Route::post('/user/getallusersad/{id}',[UserController::class, 'getRoleUserByAdmin']);
+    Route::delete('/user/addelchan/{id}', [ChannelController::class, 'sadminDelChannelById']);
+    Route::delete('/user/addelmsg/{id}', [MessageController::class, 'delMessageById']);
     Route::delete('/user/addeluser/{id}', [UserController::class, 'delUserById']);
 });
 
 
 //// ROUTES FOR GAMES ////
-Route::get('getallgames', [GameController::class, 'getAllGames']);
+Route::get('/getallgames', [GameController::class, 'getAllGames']);
 Route::get('/game/{id}', [GameController::class, 'getGameById']);
 Route::post('/getgamebytitle', [GameController::class, 'getGameByTitle']);
 
