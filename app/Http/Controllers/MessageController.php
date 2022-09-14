@@ -11,19 +11,18 @@ use Illuminate\Support\Facades\Validator;
 
 class MessageController extends Controller
 {
-    public function createNewMessage(Request $request) {
 
+    public function createNewMessage(Request $request)
+    {
         try {
-
             $userId = auth()->user()->id;
 
             Log::info('User id '.$userId. ' is creating a message..');
 
             $validator = Validator::make($request->all(), [
-                'channel_id' => ['required','integer'],
+               'channel_id' => ['required','integer'],
                 'message' => ['required','string','min:2','max:100']
             ]);
-            Log::info('User id '.$userId.' passed validator correctly.');
 
             if ($validator->fails()) {
                 
@@ -32,18 +31,19 @@ class MessageController extends Controller
                 return response()->json(
                     [
                         "success" => false,
-                        "message" => 'Error creating new message TWO '.$validator->errors()
+                        "message" => 'Error creating message. '.$validator->errors()
                     ],
                     400
                 );
             };
 
-            $channel_id = $request->input('channel_id');
+            $channelId = $request->input('channel_id');
+
+            $channel = Channel::find($channelId);
 
             Log::info('Verifying if channel exists...');
-            $channel = Channel::find($channel_id);
 
-            if(!$channel){
+            if (!$channel) {
 
                 return response()->json(
                     [
@@ -53,15 +53,16 @@ class MessageController extends Controller
                     404
                 );
             }
-            Log::info('Channel '.$channel_id.' does exist.');
+            Log::info('Channel '.$channelId.' does exist.');
 
             Log::info("Finding out if user has joined the channel...");
-            $joinedUser = DB::table('channel_user')
-            ->where('channel_id','=',$channel_id)
-            ->where('user_id', '=', $userId)
-            ->first();
 
-            if(!$joinedUser){
+            $userInChannel = DB::table('channel_user')
+                ->where('user_id', $userId)
+                ->where('channel_id', $channelId)
+                ->first();
+
+            if(!$userInChannel){
                 Log::info('User id '.$userId.' has not joined the channel yet.');
 
                 return response()->json(
@@ -73,35 +74,34 @@ class MessageController extends Controller
                 );
             }
 
-            $userMessage = $request->input('message');
+            $messageText = $request->input('message');
 
-            Log::info('User id '.$userId,' has previously joined channel '.$channel_id.' and has created a new message.');
             $message = new Message();
-            $message->channel_id = $channel_id;
-            $message->message = $userMessage;
             $message->user_id = $userId;
+            $message->channel_id = $channelId;
+            $message->message = $messageText;
+
             $message->save();
-            
-            Log::info('User id '.$userId.' created message correctly.');
+
+            Log::info('User id '.$userId.' has sent a message correctly.');
 
             return response()->json(
                 [
                     'success' => true,
-                    'message' => 'User id '.$userId.' created message correctly.'
+                    'message' => 'User id '.$userId.' sent message correctly.'
                 ],
                 200
             );
-
         } catch (\Exception $exception) {
 
-            Log::info('Error creating new message '. $exception->getMessage());
-            
+            Log::error("Error sending message: " . $exception->getMessage());
+
             return response()->json(
                 [
                     'success' => false,
-                    'message' => 'Error creating message.',
+                    'message' => 'Error sending message.'
                 ],
-                400
+                500
             );
         }
     }
@@ -114,7 +114,7 @@ class MessageController extends Controller
             Log::info('User id '.$userId.' getting own messages.');
 
             $messages = Message::query()
-            -> where('user_id','=', $userId)
+            -> where('user_id', '=' , $userId)
             -> get()
             -> toArray();
 
@@ -151,8 +151,8 @@ class MessageController extends Controller
 
             $message = Message::query()
             
-            ->where('id','=', $id)
-            ->where('user_id','=', $userId)
+            ->where('id', '=' , $id)
+            ->where('user_id' , '=' , $userId)
             ->get()->toArray();
 
             if(!$message) {
