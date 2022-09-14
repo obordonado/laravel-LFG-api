@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Channel;
 use App\Models\Message;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Validator;
 
@@ -37,8 +39,43 @@ class MessageController extends Controller
             };
 
             $channel_id = $request->input('channel_id');
+
+            Log::info('Verifying if channel exists...');
+            $channel = Channel::find($channel_id);
+
+            if(!$channel){
+
+                return response()->json(
+                    [
+                        'success' => false,
+                        'message' => 'Channel does not exist.'
+                    ],
+                    404
+                );
+            }
+            Log::info('Channel '.$channel_id.' does exist.');
+
+            Log::info("Finding out if user has joined the channel...");
+            $joinedUser = DB::table('channel_user')
+            ->where('channel_id','=',$channel_id)
+            ->where('user_id', '=', $userId)
+            ->first();
+
+            if(!$joinedUser){
+                Log::info('User id '.$userId.' has not joined the channel yet.');
+
+                return response()->json(
+                    [
+                        'success' => false,
+                        'message' => 'User id '.$userId.' must join channel first.'
+                    ],
+                    401
+                );
+            }
+
             $userMessage = $request->input('message');
 
+            Log::info('User id '.$userId,' has previously joined channel '.$channel_id.' and has created a new message.');
             $message = new Message();
             $message->channel_id = $channel_id;
             $message->message = $userMessage;
