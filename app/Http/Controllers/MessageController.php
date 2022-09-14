@@ -330,6 +330,7 @@ class MessageController extends Controller
 
             if(!$messages) {
                 Log::info('There are no messages in channel '.$channelId);
+
                return response() ->json(
                 [
                     'success'=> false,
@@ -337,7 +338,6 @@ class MessageController extends Controller
                 ],
                 404
             );
-
             }
 
             Log::info('Got messages by channel id correctly.');

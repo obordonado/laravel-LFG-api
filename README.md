@@ -370,6 +370,12 @@ Vista de los distintos grupos creados para Postman.
 
 <br><br>
 
+>* <b>Get messages by channel id;</b>
+<img src="/public/img/get-messages-by-channel-id.png" style="width:358px;"/>
+
+> No es necesaria autenticación mediante token, y se debe poner el id del canal en la url.
+
+<br><br>
 
 
 >* <b>Update message by id;</b>
