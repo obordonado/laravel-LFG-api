@@ -316,15 +316,29 @@ class MessageController extends Controller
         }
     }
 
-    public function getMessagesByChannel($channelId){
+    public function getMessagesByChannelId($channelId){
 
         try {
             Log::info('Getting messages by channel id...');
 
             $messages = Message::query()
             ->where('channel_id', '=', $channelId)
+            ->select('users.name as user', 'messages.message')
+            ->join('users', 'users.id', '=', 'messages.user_id')
             ->get()
             ->toArray();
+
+            if(!$messages) {
+                Log::info('There are no messages in channel '.$channelId);
+               return response() ->json(
+                [
+                    'success'=> false,
+                    'message'=> 'Could not find any message on this channel.'
+                ],
+                404
+            );
+
+            }
 
             Log::info('Got messages by channel id correctly.');
             

@@ -66,7 +66,7 @@ Route::group(['middleware' =>'jwt.auth'], function(){
 });
 
 //// ROUTES FOR MESSAGES ////
-Route::get('/messagesbychannelid/{id}', [MessageController::class, 'getMessagesByChannel']);
+Route::get('/messagesbychannelid/{id}', [MessageController::class, 'getMessagesByChannelId']);
 
 Route::group(['middleware' => 'jwt.auth'], function(){
     Route::post('/createmessage',[MessageController::class, 'createNewMessage']);
